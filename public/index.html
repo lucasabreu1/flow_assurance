@@ -1,0 +1,143 @@
+<html>
+<style>
+
+
+    * {
+        padding: 0;
+        margin: 0;
+        vertical-align: baseline;
+        list-style: none;
+        border: 0;
+    }
+
+    body{
+
+    }
+
+
+    .flex-grid{
+        width: 1500px;
+        display: flex;
+        border: 1px solid green;
+    }
+
+    .col-1{
+        flex: 1;
+        border: 2px solid red;
+    }
+
+
+    .system-status-header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .system-status-subtitles{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .subtitle{
+        display: flex;
+    }
+
+
+    .topside-subtitle-color{
+        width: 15px;
+        height: 15px;
+        background-color: red;
+    }
+
+    .wellhead-subtitle-color{
+        width: 15px;
+        height: 15px;
+        background-color: brown;
+    }
+
+
+    .wellhead-subtitle-color{
+        width: 15px;
+        height: 15px;
+        background-color: brown;
+    }
+
+
+    
+</style>
+
+<body>
+        <div class="flex-grid">
+
+            <div class="col-1">
+               <div class="loop-container">
+                    <div class="loop-a">
+                            <p>Loop A</p>
+                            <img src="https://via.placeholder.com/300x200"/>
+                    </div>
+                    <div class="loop-b">
+                            <p>Loop B</p>
+                            <img src="https://via.placeholder.com/300x200"/>
+                    </div>
+                    <div class="loop-c">
+                            <p>Loop C</p>
+                            <img src="https://via.placeholder.com/300x200"/>
+                    </div>
+               </div>
+            </div>
+
+            <div class="col-1">
+                <div class="system-status-container">
+
+                    <div class="system-status-header">
+                        <p>System Status</p>
+                        <div class="system-status-subtitles">
+
+                            <div class="subtitle topside-subtitle">
+                             
+                                <div class="topside-subtitle-color"></div>
+                                topside
+                                
+                            </div>
+
+                            <div class="subtitle wellhead-subtitle">
+
+                                <div class="wellhead-subtitle-color"></div>
+                                wellhead  
+
+                            </div>
+
+                            <div class="subtitle downwell-subtitle">
+                            
+                                <div class="downwell-subtitle-color"></div>
+                                downwell
+
+                                
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    
+                    <div class>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="col-1">
+                
+            </div>
+            <div class="col-1">
+               
+            </div>
+
+        </div>
+
+</body>
+
+</html>
