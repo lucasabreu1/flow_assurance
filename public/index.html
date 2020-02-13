@@ -11,12 +11,13 @@
     }
 
     body{
-
+        height: 100vh;
     }
 
 
     .flex-grid{
         width: 1500px;
+        height: 100%;
         display: flex;
         border: 1px solid green;
     }
@@ -27,39 +28,81 @@
     }
 
 
-    .system-status-header{
-        display: flex;
-        flex-direction: column;
+    .col-2{
+        flex: 1;
+        border: 2px solid cyan;
     }
 
-    .system-status-subtitles{
+
+    .system-status-subtitles-container{
         display: flex;
         flex-direction: row;
     }
 
+    .well-status-selectors{
+        display: flex;
+        flex-direction: row;        
+    }
 
-    .subtitle{
+    .flex-row{
         display: flex;
     }
 
 
-    .topside-subtitle-color{
+    .display-loop-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .topside-subtitle-icon{
         width: 15px;
         height: 15px;
         background-color: red;
     }
 
-    .wellhead-subtitle-color{
+    .wellhead-subtitle-icon{
         width: 15px;
         height: 15px;
         background-color: brown;
     }
 
 
-    .wellhead-subtitle-color{
+    .downwell-subtitle-icon{
         width: 15px;
         height: 15px;
-        background-color: brown;
+        background-color:springgreen;
+    }
+
+
+    .well-selector-icon{
+        width: 15px;
+        height: 15px;
+        background-color: limegreen;        
+    }
+
+    .period-selector-icon{
+        width: 15px;
+        height: 15px;
+        background-color: fuchsia;        
+    }
+
+    .curves-container{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid brown;
+    }
+
+    .curves-row{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid pink;
+    }
+
+    .curve-cel{
+        border: 1px solid black;
     }
 
 
@@ -70,18 +113,18 @@
         <div class="flex-grid">
 
             <div class="col-1">
-               <div class="loop-container">
+               <div class="display-loop-container  loop-container">
                     <div class="loop-a">
                             <p>Loop A</p>
-                            <img src="https://via.placeholder.com/300x200"/>
+                            <img class="loop-a-graph-container" src="https://via.placeholder.com/300x200"/>
                     </div>
                     <div class="loop-b">
                             <p>Loop B</p>
-                            <img src="https://via.placeholder.com/300x200"/>
+                            <img class="loop-b-graph-container" src="https://via.placeholder.com/300x200"/>
                     </div>
                     <div class="loop-c">
                             <p>Loop C</p>
-                            <img src="https://via.placeholder.com/300x200"/>
+                            <img class="loop-c-graph-container" src="https://via.placeholder.com/300x200"/>
                     </div>
                </div>
             </div>
@@ -91,49 +134,75 @@
 
                     <div class="system-status-header">
                         <p>System Status</p>
-                        <div class="system-status-subtitles">
+                        <div class="system-status-subtitles-container">
 
-                            <div class="subtitle topside-subtitle">
+                            <div class="flex-row topside-subtitle">
                              
-                                <div class="topside-subtitle-color"></div>
-                                topside
+                                <div class="topside-subtitle-icon"></div>
+                                <p>Topside</p>
                                 
                             </div>
 
-                            <div class="subtitle wellhead-subtitle">
+                            <div class="flex-row subtitle wellhead-subtitle">
 
-                                <div class="wellhead-subtitle-color"></div>
-                                wellhead  
+                                <div class="wellhead-subtitle-icon"></div>
+                                <p>Wellhead</p>  
 
                             </div>
 
-                            <div class="subtitle downwell-subtitle">
+                            <div class="flex-row subtitle downwell-subtitle">
                             
-                                <div class="downwell-subtitle-color"></div>
-                                downwell
-
+                                <div class="downwell-subtitle-icon"></div>
+                                <p>Downwell</p>
                                 
-
                             </div>
 
                         </div>
                     </div>
 
-
                     
-                    <div class>
-
+                    <div class="fpso-loops-container">
+                        <img src="https://via.placeholder.com/300x600"/>
                     </div>
 
 
                 </div>
             </div>
 
-            <div class="col-1">
-                
-            </div>
-            <div class="col-1">
-               
+            <div class="col-2">
+                <div class="well-status-container">
+                    
+                    <div class="well-status-header">
+                        <p>Well Status</p>
+                        <div class="well-status-selectors">
+
+                            <div class="flex-row well-selector">
+                                <div class="well-selector-icon"></div>
+                                <p>Well Selector</p>
+                            </div>
+
+                            <div class="flex-row period-selector">
+                                <div class="period-selector-icon"></div>
+                                <p>Period Selector</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="curves-container">
+                    <div class="curves-row">
+                        <div class="col-1 curve-cell">curve 1</div>
+                        <div class="col-1 curve-cell">curve 2</div>
+                    </div>
+                    <div class="curves-row">
+                        <div class="col-1 curve-cell">curve 3</div>
+                        <div class="col-1 curve-cell">curve 4</div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
