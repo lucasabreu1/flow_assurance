@@ -17,14 +17,10 @@
             
                 body{
                     height: 100vh;
-                    margin-top: 40px;
-                    padding-left: 34px;
-                    padding-right: 34px;
                 }
             
 
                 .app-container{
-                    min-width: 1900px;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
@@ -37,6 +33,7 @@
                     align-items: center;
 
                 }
+
             
                 .flex-grid{
                     
@@ -51,7 +48,10 @@
                     border: 2px solid red;
                 }
             
-    
+                .col-2{
+                    flex: 2;
+                    border: 2px solid red;
+                }    
             
             
                 .system-status-subtitles-container{
@@ -66,22 +66,24 @@
             
                 .flex-row{
                     display: flex;
+                    align-items: center;
+                }
+
+                .flex-column{
+                    display: flex;
+                    flex-direction: column;
                 }
             
             
                 .display-loop-container{
-                    height: 100%;
-                    display: flex;
+                    /* display: flex;
                     flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
+                    align-items: center; */
+
                 }
             
                 .system-status-container{
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
+                    font-size: 1.3em;
                 }
 
 
@@ -96,16 +98,42 @@
                 .topside-subtitle-icon{
                     width: 15px;
                     height: 15px;
-                    background-color: red;
-                }
-            
-                .wellhead-subtitle-icon{
-                    width: 15px;
-                    height: 15px;
+                    margin-right:8px;
+                    border-radius: 2px;
                     background-color: brown;
                 }
             
+                .wellhead-subtitle{
+                    margin-left: 35px;
+                }
+
+                .wellhead-subtitle-icon{
+                    width: 15px;
+                    height: 15px;
+                    margin-right:8px;
+                    border-radius: 2px;
+                    background-color: blue;
+                }
+
+
+                .well-good{
+                    width: 15px;
+                    height: 15px;
+                    margin-right:8px;
+                    border-radius: 2px;
+                    background-color: rgb(66, 238, 26);
+                }
             
+
+                .well-warning{
+                    width: 15px;
+                    height: 15px;
+                    margin-right:8px;
+                    border-radius: 2px;
+                    background-color: red;
+                }
+
+
                 .downwell-subtitle-icon{
                     width: 15px;
                     height: 15px;
@@ -127,12 +155,14 @@
             
                 .curves-container{
                     display: flex;
+                    height: 100%;
                     flex-direction: column;
                     border: 1px solid brown;
                 }
             
                 .curves-row{
                     display: flex;
+                    flex: 1;
                     flex-direction: row;
                     border: 1px solid pink;
                 }
@@ -143,36 +173,43 @@
             
 
                 .loop-a{
-                    width: 500px;
+                    /* width:80%; */
 
                 }
 
 
                 .loop-b{
-                    width: 500px;
+                    /* width: 80%; */
 
                 }
 
 
                 .loop-c{
-                    width: 500px;
+                    /* width: 80%; */
 
                 }
 
                 .fpso-loops-container{
-                   background-image: url('./loops.jpg');
-                   width: 500px;
-                   height: 500px;
                    background-size: contain;
                    background-position: center;
                    background-repeat: no-repeat;
+                   background-image: url('./loop3.svg');
+                   width: 90%;
+                   height: 90%;
+
                 }
 
 
                 .hydrate{
-                   background: url('./hydrate.jpg');
-                   width: 300px;
-                   height: 300px;
+                   /* background: url('./hydrate.jpg'); */
+                   /* width: 90%; */
+                   background-size: contain;
+                   background-position: center;
+                   background-repeat: no-repeat;              
+                }
+
+                .wax{
+                   /* width: 90%; */
                    background-size: contain;
                    background-position: center;
                    background-repeat: no-repeat;              
@@ -184,11 +221,10 @@
                     height: 80px;
                 }
 
-                .loop-hydrate-graph-container{
-                    width: 300px !important;
-                    width: 300px !important;
-                }
 
+                * {
+                    border: none;
+                }
 
             </style>
 
@@ -215,35 +251,30 @@
                 <div class="flex-grid">
 
                         <div class="col-1">
-
-
-                                    <div class="system-status-header">
-                                            <p>System Status</p>
-                                            <div class="system-status-subtitles-container">
-                    
-                                                <div class="flex-row topside-subtitle">
+                            <div class="system-status-container">
+                                <div class="system-status-header">
+                                        <p>System Status</p>
+                                        <div class="system-status-subtitles-container">
+                
+                                            <div class="flex-row topside-subtitle">
+                                            
+                                                <div class="topside-subtitle-icon"></div>
+                                                <p>Topside</p>
                                                 
-                                                    <div class="topside-subtitle-icon"></div>
-                                                    <p>Topside</p>
-                                                    
-                                                </div>
-                    
-                                                <div class="flex-row subtitle wellhead-subtitle">
-                    
-                                                    <div class="wellhead-subtitle-icon"></div>
-                                                    <p>Wellhead</p>  
-                    
-                                                </div>
-                    
-                                                <div class="flex-row subtitle downwell-subtitle">
-                                                
-                                                    <div class="downwell-subtitle-icon"></div>
-                                                    <p>Downwell</p>
-                                                    
-                                                </div>
-                    
                                             </div>
-                                        </div>     
+                
+                                            <div class="flex-row subtitle wellhead-subtitle">
+                
+                                                <div class="wellhead-subtitle-icon"></div>
+                                                <p>Wellhead</p>  
+                
+                                            </div>
+                
+
+                
+                                        </div>
+                                </div>     
+                            </div>
 
                            <div class="display-loop-container loop-container">
                                 <div class="loop-a">
@@ -260,54 +291,47 @@
                                         <canvas id="loop-c-graph-container"></canvas>
                                 </div>
                            </div>
-                        </div>
+                    </div>
             
-                        <div class="col-1">
+                        <!-- Well Status -->
+                        <div class="flex-column col-1">
+
                             <div class="system-status-container">
-            
                                 <div class="system-status-header">
-                                    <p>System Status</p>
-                                    <div class="system-status-subtitles-container">
-            
-                                        <div class="flex-row topside-subtitle">
-                                         
-                                            <div class="topside-subtitle-icon"></div>
-                                            <p>Topside</p>
+                                        <p>Well Status</p>
+                                        <div class="system-status-subtitles-container">
+                
+                                            <div class="flex-row topside-subtitle">
                                             
+                                                <div class="well-good"></div>
+                                                <p>Good</p>
+                                                
+                                            </div>
+                
+                                            <div class="flex-row subtitle wellhead-subtitle">
+                
+                                                <div class="well-warning"></div>
+                                                <p>Warning</p>  
+                
+                                            </div>
+                
+
+                
                                         </div>
-            
-                                        <div class="flex-row subtitle wellhead-subtitle">
-            
-                                            <div class="wellhead-subtitle-icon"></div>
-                                            <p>Wellhead</p>  
-            
-                                        </div>
-            
-                                        <div class="flex-row subtitle downwell-subtitle">
-                                        
-                                            <div class="downwell-subtitle-icon"></div>
-                                            <p>Downwell</p>
-                                            
-                                        </div>
-            
-                                    </div>
-                                </div>
-            
-                                
-                                <div class="fpso-loops-container">
-                                    <!-- <img class="" src="./loops.jpg"/> -->
-                                    <canvas id="fpso-loops-graph-container"></canvas>
-                                </div>
-            
-            
+                                </div>     
                             </div>
+
+                            <div class="fpso-loops-container">
+                            </div>
+            
+            
                         </div>
             
                         <div class="col-1">
                             <div class="well-status-container">
                                 
                                 <div class="well-status-header">
-                                    <p>Well Status</p>
+                                    <p>Wellbore Characteristics</p>
                                     <div class="well-status-selectors">
             
                                         <div class="flex-row well-selector">
@@ -330,14 +354,14 @@
                                         <div class="col-1 curve-cell hydrate">
                                                 <canvas id="loop-hydrate-graph-container"></canvas>
                                         </div>
-                                        <div class="col-1 curve-cell">
-                                                <img class="loop-wax-graph-container" />
+                                        <div class="col-1 curve-cell wax">
+                                                <canvas id="loop-wax-graph-container"></canvas>
 
                                         </div>
                                     </div>
                                     <div class="curves-row">
                                         <div class="col-1 curve-cell">
-                                                <img class="loop-asphaltene-graph-container"/>
+                                                <canvas id="loop-asphaltene-graph-container"></canvas>
 
                                         </div>
                                         <div class="col-1 curve-cell">
@@ -353,8 +377,6 @@
             
                     </div>
 
-
-
         </div>
 
 
@@ -368,8 +390,10 @@
         let chart_loop_a = document.getElementById('loop-a-graph-container').getContext('2d');
         let chart_loop_b = document.getElementById('loop-b-graph-container').getContext('2d');
         let chart_loop_c = document.getElementById('loop-c-graph-container').getContext('2d');
-        let chart_fpso = document.getElementById('fpso-loops-graph-container').getContext('2d');
+        // let chart_fpso = document.getElementById('fpso-loops-graph-container').getContext('2d');
         let chart_hydrate = document.getElementById('loop-hydrate-graph-container').getContext('2d');
+        let chart_wax = document.getElementById('loop-wax-graph-container').getContext('2d');
+
 
 
         var scatterChart = new Chart(chart_loop_a, {
@@ -395,7 +419,7 @@
         },
         {
             /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'green', 
+            pointBackgroundColor: 'brown', 
             data: [{
                 x: 89,
                 y: 79
@@ -409,6 +433,13 @@
         options: {
             scales: {
                 xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Temperature',
+                        fontSize: 15
+                    }
+                    },
+                    {
                     type: 'linear',
                     position: 'bottom',
                     ticks: {
@@ -416,7 +447,16 @@
                         
                     }
                 }],
-                yAxes: [{
+                yAxes: [
+                    
+                    {
+                        scaleLabel:{
+                            display: true,
+                            labelString: "Pressure",
+                            fontSize: 15
+                        }
+                    }
+                    ,{
                     ticks:{
                         suggestedMin: 0,
                         
@@ -426,7 +466,8 @@
             },
             title: {
                 display: true,
-                text: 'Loop A'
+                text: 'Loop A',
+                fontSize: 20
             },
             legend: {
                 display: false
@@ -443,28 +484,28 @@
             /*WELLHEAD*/
             pointBackgroundColor: 'blue', 
             data: [{
-                x: 57,
-                y: 427
+                x: 87,
+                y: 457
             },{
-                x: 85,
-                y: 390                        
+                x:115,
+                y: 430                        
             },{
-                x:83,
-                y:320
+                x:123,
+                y:360
             },{
-                x: 82,
-                y:290
+                x: 122,
+                y:330
             }]
         },
         {
             /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'green', 
+            pointBackgroundColor: 'brown', 
             data: [{
-                x: 89,
-                y: 79
+                x: 99,
+                y: 69
             },{
-                x: 82,
-                y: 79                        
+                x: 102,
+                y: 69                        
             }]
         }],
            
@@ -489,7 +530,8 @@
             },
             title: {
                 display: true,
-                text: 'Loop B'
+                text: 'Loop B',
+                fontSize: 20
             },
             legend: {
                 display: false
@@ -507,28 +549,28 @@
             /*WELLHEAD*/
             pointBackgroundColor: 'blue', 
             data: [{
-                x: 57,
-                y: 427
+                x: 37,
+                y: 407
             },{
-                x: 85,
-                y: 390                        
+                x: 65,
+                y: 350                        
             },{
-                x:83,
-                y:320
+                x:63,
+                y:300
             },{
-                x: 82,
-                y:290
+                x: 62,
+                y:270
             }]
         },
         {
             /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'green', 
+            pointBackgroundColor: 'brown', 
             data: [{
-                x: 89,
-                y: 79
+                x: 95,
+                y: 72
             },{
-                x: 82,
-                y: 79                        
+                x: 76,
+                y: 89                        
             }]
         }],
            
@@ -553,7 +595,8 @@
             },
             title: {
                 display: true,
-                text: 'Loop C'
+                text: 'Loop C',
+                fontSize: 20
             },
             legend: {
                 display: false
@@ -562,126 +605,105 @@
         }); 
 
 
-
-
-        var scatterChart = new Chart(chart_fpso, {
-        type: 'scatter',
-        data: {
-        datasets: [{
-            /*WELLHEAD*/
-            pointBackgroundColor: 'blue', 
-            data: [{
-                x: 275,
-                y: 320
-            },{
-                x: 275,
-                y: 290                        
-            },{
-                x:275,
-                y:238
-            },{
-                x: 275,
-                y: 218
-            },
-            ,{
-                x: 275,
-                y: 218
-            },
-            ,{
-                x: 275,
-                y: 218
-            },
-            ,]
-        },
-        {
-            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'green', 
-            data: [{
-                x: 89,
-                y: 79
-            },{
-                x: 82,
-                y: 79                        
-            }]
-        }],
-           
-        },
-        options: {
-            maintainAspectRatio: false,
-            scales: {
-                xAxes: [{
-                    type: 'linear',
-                    position: 'bottom',
-                    ticks: {
-                        suggestedMin: 0,
-                        suggestedMax: 450
+        // var scatterChart = new Chart(chart_fpso, {
+        // type: 'scatter',
+        // data: {
+        // datasets: [{
+        //     pointBackgroundColor: 'blue', 
+        //     data: [{
+        //         x: 59,
+        //         y: 40
+        //     },{
+        //         x: 59,
+        //         y: 43                        
+        //     },{
+        //         x:40,
+        //         y:32
+        //     },{
+        //         x: 40,
+        //         y: 42
+        //     },
+        //     ,{
+        //         x: 10,
+        //         y: 27
+        //     },
+        //     ,{
+        //         x: 53,
+        //         y: 42
+        //     },
+        //     ,]
+        // }],  
+        // },
+        // options: {
+        //     responsive: true,
+        //     maintainAspectRatio: false,
+        //     scales: {
+        //         xAxes: [{
+        //             type: 'linear',
+        //             position: 'bottom',
+        //             ticks: {
+        //                 suggestedMin: 0,
+        //                 suggestedMax: 100,
+        //                 stepSize: 10
                         
-                    }
-                }],
-                yAxes: [{
-                    ticks:{
-                        suggestedMin: 0,
-                        suggestedMax: 450
-                        
-                    }
+        //             }
+        //         }],
+        //         yAxes: [{
+        //             ticks:{
+        //                 suggestedMin: 0,
+        //                 suggestedMax: 100,
+        //                 stepSize: 10                       
+        //             }
 
-                }]
-            },
-            title: {
-                display: true,
-                text: 'Loop A'
-            },
-            legend: {
-                display: false
-            }
-        }
-        });
-
+        //         }]
+        //     },
+        //     title: {
+        //         display: true,
+        //         text: 'Wellbores',
+        //         fontSize:20
+        //     },
+        //     legend: {
+        //         display: false
+        //     }
+        // }
+        // });
 
         var scatterChart = new Chart(chart_hydrate, {
-        type: 'scatter',
+        type: 'line',
         data: {
         datasets: [{
+        
             /*WELLHEAD*/
             pointBackgroundColor: 'blue', 
             data: [{
-                x: 275,
-                y: 320
+                x: 37,
+                y: 407
             },{
-                x: 275,
-                y: 290                        
+                x: 65,
+                y: 350                        
             },{
-                x:275,
-                y:238
+                x:63,
+                y:300
             },{
-                x: 275,
-                y: 218
-            },
-            ,{
-                x: 275,
-                y: 218
-            },
-            ,{
-                x: 275,
-                y: 218
-            },
-            ,]
+                x: 62,
+                y:270
+            }]
         },
         {
             /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'green', 
+            pointBackgroundColor: 'brown', 
             data: [{
-                x: 89,
-                y: 79
+                x: 95,
+                y: 72
             },{
-                x: 82,
-                y: 79                        
+                x: 76,
+                y: 89                        
             }]
         }],
            
         },
         options: {
-            responsive: true, 
+            responsive: true,
             maintainAspectRatio: false,
             scales: {
                 xAxes: [{
@@ -689,14 +711,12 @@
                     position: 'bottom',
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 450
-                        
+                       
                     }
                 }],
                 yAxes: [{
                     ticks:{
                         suggestedMin: 0,
-                        suggestedMax: 450
                         
                     }
 
@@ -704,15 +724,80 @@
             },
             title: {
                 display: true,
-                text: 'Loop A'
+                text: 'Hydrate',
+                fontSize: 20
             },
             legend: {
                 display: false
             }
         }
-        });
+        }); 
 
 
+        var scatterChart = new Chart(chart_wax, {
+        type: 'line',
+        data: {
+        datasets: [{
+        
+            /*WELLHEAD*/
+            pointBackgroundColor: 'blue', 
+            data: [{
+                x: 37,
+                y: 407
+            },{
+                x: 65,
+                y: 350                        
+            },{
+                x:63,
+                y:300
+            },{
+                x: 62,
+                y:270
+            }]
+        },
+        {
+            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
+            pointBackgroundColor: 'brown', 
+            data: [{
+                x: 95,
+                y: 72
+            },{
+                x: 76,
+                y: 89                        
+            }]
+        }],
+           
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                xAxes: [{
+                    type: 'linear',
+                    position: 'bottom',
+                    ticks: {
+                        suggestedMin: 0,
+                       
+                    }
+                }],
+                yAxes: [{
+                    ticks:{
+                        suggestedMin: 0,
+                        
+                    }
+
+                }]
+            },
+            title: {
+                display: true,
+                text: 'Wax',
+                fontSize: 20
+            },
+            legend: {
+                display: false
+            }
+        }
+        }); 
 
 
 
