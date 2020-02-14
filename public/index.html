@@ -446,133 +446,453 @@
                         {
                             /*WELLHEAD*/
                             pointBackgroundColor: 'blue', 
-                            data: [{
-                                x: 57,
-                                y: 427
-                            },{
-                                x: 85,
-                                y: 390                        
-                            },{
-                                x:83,
-                                y:320
-                            },{
-                                x: 82,
-                                y:290
-                            }]
+                            data: 
+                            [
+                                {
+                                    x: 57,
+                                    y: 427
+                                },
+                                {
+                                    x: 85,
+                                    y: 390                        
+                                },
+                                {
+                                    x:83,
+                                    y:320
+                                },
+                                {
+                                    x: 82,
+                                    y:290
+                                }
+                            ]
                         },
                         {
                             /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
                             pointBackgroundColor: 'brown', 
-                            data: [{
-                                x: 89,
-                                y: 79
-                            },{
-                                x: 82,
-                                y: 79                        
-                            }]
+                            data: 
+                            [
+                                {
+                                    x: 89,
+                                    y: 79
+                                },
+                                {
+                                    x: 82,
+                                    y: 79                        
+                                }
+                            ]
+                        },
+                        {
+                            pointBackgroundColor: 'black',
+                            data: 
+                                [
+                                    {
+                                        x: 10,
+                                        y: 50
+                                    },
+                                    {
+                                        x: 22,
+                                        y: 80                        
+                                    },
+                                    {
+                                        x: 35,
+                                        y: 150
+                                    },
+                                    {
+                                        x: 42,
+                                        y: 220
+                                    },
+                                    {
+                                        x: 55,
+                                        y: 410
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                                
+                        },
+                        {
+                            pointBackgroundColor: 'black',
+                            data: 
+                                [
+                                    {
+                                        x: 110,
+                                        y: 50
+                                    },
+                                    {
+                                        x: 98,
+                                        y: 80                        
+                                    },
+                                    {
+                                        x:85,
+                                        y:150
+                                    },
+                                    {
+                                        x: 78,
+                                        y: 220
+                                    },
+                                    {
+                                        x: 60,
+                                        y: 410
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                                
+                        },
+                        {
+                            pointBackgroundColor: 'black', 
+                            data: 
+                                [
+                                    {
+                                        x: 10,
+                                        y: 100
+                                    },{
+                                        x: 40,
+                                        y: 100                        
+                                    },{
+                                        x: 70,
+                                        y:100
+                                    },{
+                                        x: 100,
+                                        y: 100
+                                    },{
+                                        x:130,
+                                        y:100
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                            
+                        },
+                        {
+                            pointBackgroundColor: 'black', 
+                            data: 
+                                [
+                                    {
+                                        x: 10,
+                                        y: 200
+                                    },
+                                    {
+                                        x: 40,
+                                        y: 200                        
+                                    },
+                                    {
+                                        x: 70,
+                                        y:200
+                                    },
+                                    {
+                                        x: 100,
+                                        y: 200
+                                    },
+                                    {
+                                        x:130,
+                                        y:200
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                            
                         }
                     ],
            
             },
-            options: 
-            {
-            scales:
-            {
-                xAxes: 
-                    [
-                        {
-                        type: 'linear',
-                        position: 'bottom',
-                        ticks: 
-                        {
-                        suggestedMin: 0,
-                        
-                        }
-                        }
-                    ],
-                yAxes: [
+                options: 
                     {
-                    ticks:{
-                        suggestedMin: 0,
-                        
+                    scales:
+                        {
+                            xAxes: 
+                                [
+                                    {
+                                        type: 'linear',
+                                        position: 'bottom',
+                                        ticks: 
+                                        {
+                                            suggestedMin: 0,
+                            
+                                        }
+                                    }               
+                                ],
+                            yAxes: 
+                                [
+                                    {
+                                        ticks:
+                                            {
+                                                
+                                            suggestedMin: 0,
+                                            
+                                            }
+
+                                    }
+                                ]
+                        },
+                    title: 
+                        {
+                            display: true,
+                            text: 'Loop A',
+                            fontSize: 20
+                        },
+                        legend:
+                            {
+
+                            display: false
+
+                            }
                     }
 
-                }]
-            },
-            title: {
-                display: true,
-                text: 'Loop A',
-                fontSize: 20
-            },
-            legend: {
-                display: false
-            }
-            }
         });
 
-
         var scatterChart = new Chart(chart_loop_b, {
-        type: 'scatter',
-        data: {
-        datasets: [{
-        
-            /*WELLHEAD*/
-            pointBackgroundColor: 'blue', 
-            data: [{
-                x: 87,
-                y: 457
-            },{
-                x:115,
-                y: 430                        
-            },{
-                x:123,
-                y:360
-            },{
-                x: 122,
-                y:330
-            }]
-        },
-        {
-            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'brown', 
-            data: [{
-                x: 99,
-                y: 69
-            },{
-                x: 102,
-                y: 69                        
-            }]
-        }],
+            type: 'scatter',
+            data: 
+            {
+                datasets:  
+                    [
+                        {
+                            /*WELLHEAD*/
+                            pointBackgroundColor: 'blue', 
+                            data: 
+                            [
+                                {
+                                    x: 87,
+                                    y: 427
+                                },
+                                {
+                                    x: 115,
+                                    y: 430                        
+                                },
+                                {
+                                    x:123,
+                                    y:360
+                                },
+                                {
+                                    x: 122,
+                                    y:330
+                                }
+                            ]
+                        },
+                        {
+                            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
+                            pointBackgroundColor: 'brown', 
+                            data: 
+                            [
+                                {
+                                    x: 99,
+                                    y: 69
+                                },
+                                {
+                                    x: 102,
+                                    y: 69                        
+                                }
+                            ]
+                        },
+                        {
+                            pointBackgroundColor: 'black',
+                            data: 
+                                [
+                                    {
+                                        x: 10,
+                                        y: 50
+                                    },
+                                    {
+                                        x: 22,
+                                        y: 80                        
+                                    },
+                                    {
+                                        x: 35,
+                                        y: 150
+                                    },
+                                    {
+                                        x: 42,
+                                        y: 220
+                                    },
+                                    {
+                                        x: 55,
+                                        y: 410
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                                
+                        },
+                        {
+                            pointBackgroundColor: 'black',
+                            data: 
+                                [
+                                    {
+                                        x: 110,
+                                        y: 50
+                                    },
+                                    {
+                                        x: 98,
+                                        y: 80                        
+                                    },
+                                    {
+                                        x:85,
+                                        y:150
+                                    },
+                                    {
+                                        x: 78,
+                                        y: 220
+                                    },
+                                    {
+                                        x: 60,
+                                        y: 410
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                                
+                        },
+                        {
+                            pointBackgroundColor: 'black', 
+                            data: 
+                                [
+                                    {
+                                        x: 10,
+                                        y: 100
+                                    },{
+                                        x: 40,
+                                        y: 100                        
+                                    },{
+                                        x: 70,
+                                        y:100
+                                    },{
+                                        x: 100,
+                                        y: 100
+                                    },{
+                                        x:130,
+                                        y:100
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                            
+                        },
+                        {
+                            pointBackgroundColor: 'black', 
+                            data: 
+                                [
+                                    {
+                                        x: 10,
+                                        y: 200
+                                    },
+                                    {
+                                        x: 40,
+                                        y: 200                        
+                                    },
+                                    {
+                                        x: 70,
+                                        y:200
+                                    },
+                                    {
+                                        x: 100,
+                                        y: 200
+                                    },
+                                    {
+                                        x:130,
+                                        y:200
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                            
+                        }
+                    ],
            
-        },
-        options: {
-            scales: {
-                xAxes: [{
-                    type: 'linear',
-                    position: 'bottom',
-                    ticks: {
-                        suggestedMin: 0,
-                       
-                    }
-                }],
-                yAxes: [{
-                    ticks:{
-                        suggestedMin: 0,
-                        
+            },
+                options: 
+                    {
+                    scales:
+                        {
+                            xAxes: 
+                                [
+                                    {
+                                        type: 'linear',
+                                        position: 'bottom',
+                                        ticks: 
+                                        {
+                                            suggestedMin: 0,
+                            
+                                        }
+                                    }               
+                                ],
+                            yAxes: 
+                                [
+                                    {
+                                        ticks:
+                                            {
+                                                
+                                            suggestedMin: 0,
+                                            
+                                            }
+
+                                    }
+                                ]
+                        },
+                    title: 
+                        {
+                            display: true,
+                            text: 'Loop B',
+                            fontSize: 20
+                        },
+                        legend:
+                            {
+
+                            display: false
+
+                            }
                     }
 
-                }]
-            },
-            title: {
-                display: true,
-                text: 'Loop B',
-                fontSize: 20
-            },
-            legend: {
-                display: false
-            }
-        }
-        }); 
+        });
+
 
 
 
@@ -854,7 +1174,6 @@
             }]
         },{
         
-        /*CURVA HYDRATE*/
         pointBackgroundColor: 'black', 
         data: [{
             x: 10,
@@ -884,7 +1203,7 @@
 
         },{
         
-        /*CURVA HYDRATE*/
+        
         pointBackgroundColor: 'black', 
         data: [{
             x: 10,
