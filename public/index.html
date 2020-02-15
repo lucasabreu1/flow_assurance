@@ -64,6 +64,7 @@
                 }
             
                 .well-status-selectors{
+                    visibility: hidden;
                     display: flex;
                     flex-direction: row;        
                 }
@@ -105,7 +106,7 @@
                     height: 15px;
                     margin-right:8px;
                     border-radius: 2px;
-                    background-color: brown;
+                    background-color: rgb(255,0,238);
                 }
             
                 .wellhead-subtitle{
@@ -117,7 +118,7 @@
                     height: 15px;
                     margin-right:8px;
                     border-radius: 2px;
-                    background-color: blue;
+                    background-color:rgb(0,0,255);
                 }
 
 
@@ -335,7 +336,7 @@
                             <div class="well-status-container">
                                 
                                 <div class="well-status-header">
-                                    <p>Characteristics</p>
+                                    <p>Interval: 3 minutes (solid color is more recent)</p>
                                     <div class="well-status-selectors">
             
                                         <div class="flex-row well-selector">
@@ -378,7 +379,7 @@
                         <div class="col-1">
                                 <div class="well-status-container">
                                     
-                                    <div class="well-status-header">
+                                    <div style="visibility: hidden;" class="well-status-header">
                                         <p>Characteristics</p>
                                         <div class="well-status-selectors">
                 
@@ -445,7 +446,7 @@
                     [
                         {
                             /*WELLHEAD*/
-                            pointBackgroundColor: 'blue', 
+                            pointBackgroundColor: 'rgb(0,0,255)', 
                             data: 
                             [
                                 {
@@ -468,7 +469,7 @@
                         },
                         {
                             /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-                            pointBackgroundColor: 'brown', 
+                            pointBackgroundColor: 'rgb(255,0,238)', 
                             data: 
                             [
                                 {
@@ -502,7 +503,7 @@
                                         y: 220
                                     },
                                     {
-                                        x: 55,
+                                        x: 50,
                                         y: 410
                                     }
                                 ],
@@ -673,7 +674,7 @@
                     [
                         {
                             /*WELLHEAD*/
-                            pointBackgroundColor: 'blue', 
+                            pointBackgroundColor: 'rgb(0,0,255)', 
                             data: 
                             [
                                 {
@@ -696,7 +697,7 @@
                         },
                         {
                             /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-                            pointBackgroundColor: 'brown', 
+                            pointBackgroundColor: 'rgb(255,0,238)', 
                             data: 
                             [
                                 {
@@ -730,7 +731,7 @@
                                         y: 220
                                     },
                                     {
-                                        x: 55,
+                                        x: 50,
                                         y: 410
                                     }
                                 ],
@@ -877,7 +878,7 @@
                                     }
                                 ]
                         },
-                    title: 
+                        title: 
                         {
                             display: true,
                             text: 'Loop B',
@@ -893,113 +894,347 @@
 
         });
 
-
-
-
         var scatterChart = new Chart(chart_loop_c, {
-        type: 'scatter',
-        data: {
-        datasets: [{
-        
-            /*WELLHEAD*/
-            pointBackgroundColor: 'blue', 
-            data: [{
-                x: 37,
-                y: 407
-            },{
-                x: 65,
-                y: 350                        
-            },{
-                x:63,
-                y:300
-            },{
-                x: 62,
-                y:270
-            }]
-        },
-        {
-            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'brown', 
-            data: [{
-                x: 95,
-                y: 72
-            },{
-                x: 76,
-                y: 89                        
-            }]
-        }],
+            type: 'scatter',
+            data: 
+            {
+                datasets:  
+                    [
+                        {
+                            /*WELLHEAD*/
+                            pointBackgroundColor: 'rgb(0,0,255)', 
+                            data: 
+                            [
+                                {
+                                    x: 37,
+                                    y: 407
+                                },
+                                {
+                                    x: 65,
+                                    y: 350                        
+                                },
+                                {
+                                    x:63,
+                                    y:300
+                                },
+                                {
+                                    x: 62,
+                                    y: 270
+                                }
+                            ]
+                        },
+                        {
+                            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
+                            pointBackgroundColor: 'rgb(255,0,238)', 
+                            data: 
+                            [
+                                {
+                                    x: 95,
+                                    y: 72
+                                },
+                                {
+                                    x: 76,
+                                    y: 89                        
+                                }
+                            ]
+                        },
+                        {
+                            pointBackgroundColor: 'black',
+                            data: 
+                                [
+                                    {
+                                        x: 10,
+                                        y: 50
+                                    },
+                                    {
+                                        x: 22,
+                                        y: 80                        
+                                    },
+                                    {
+                                        x: 35,
+                                        y: 150
+                                    },
+                                    {
+                                        x: 42,
+                                        y: 220
+                                    },
+                                    {
+                                        x: 50,
+                                        y: 410
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                                
+                        },
+                        {
+                            pointBackgroundColor: 'black',
+                            data: 
+                                [
+                                    {
+                                        x: 110,
+                                        y: 50
+                                    },
+                                    {
+                                        x: 98,
+                                        y: 80                        
+                                    },
+                                    {
+                                        x:85,
+                                        y:150
+                                    },
+                                    {
+                                        x: 78,
+                                        y: 220
+                                    },
+                                    {
+                                        x: 60,
+                                        y: 410
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                                
+                        },
+                        {
+                            pointBackgroundColor: 'black', 
+                            data: 
+                                [
+                                    {
+                                        x: 10,
+                                        y: 100
+                                    },{
+                                        x: 40,
+                                        y: 100                        
+                                    },{
+                                        x: 70,
+                                        y:100
+                                    },{
+                                        x: 100,
+                                        y: 100
+                                    },{
+                                        x:130,
+                                        y:100
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                            
+                        },
+                        {
+                            pointBackgroundColor: 'black', 
+                            data: 
+                                [
+                                    {
+                                        x: 10,
+                                        y: 200
+                                    },
+                                    {
+                                        x: 40,
+                                        y: 200                        
+                                    },
+                                    {
+                                        x: 70,
+                                        y:200
+                                    },
+                                    {
+                                        x: 100,
+                                        y: 200
+                                    },
+                                    {
+                                        x:130,
+                                        y:200
+                                    }
+                                ],
+                            borderColor: 'black',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'black',
+                            pointBorderColor: 'black',
+                            pointRadius: 0.1,
+                            pointHoverRadius: 5,
+                            fill: false,
+                            tension: 0,
+                            showLine: true                            
+                        }
+                    ],
            
-        },
-        options: {
-            scales: {
-                xAxes: [{
-                    type: 'linear',
-                    position: 'bottom',
-                    ticks: {
-                        suggestedMin: 0,
-                       
-                    }
-                }],
-                yAxes: [{
-                    ticks:{
-                        suggestedMin: 0,
-                        
+            },
+                options: 
+                    {
+                    scales:
+                        {
+                            xAxes: 
+                                [
+                                    {
+                                        type: 'linear',
+                                        position: 'bottom',
+                                        ticks: 
+                                        {
+                                            suggestedMin: 0,
+                            
+                                        }
+                                    }               
+                                ],
+                            yAxes: 
+                                [
+                                    {
+                                        ticks:
+                                            {
+                                                
+                                            suggestedMin: 0,
+                                            
+                                            }
+
+                                    }
+                                ]
+                        },
+                        title: 
+                        {
+                            display: true,
+                            text: 'Loop C',
+                            fontSize: 20
+                        },
+                        legend:
+                            {
+
+                            display: false
+
+                            }
                     }
 
-                }]
-            },
-            title: {
-                display: true,
-                text: 'Loop C',
-                fontSize: 20
-            },
-            legend: {
-                display: false
-            }
-        }
-        }); 
+        });
+
+
+
+
+
+ 
 
         var scatterChart = new Chart(chart_hydrate, {
         type: 'scatter',
         data: {
-        datasets: [{
-        
-                /*WELLHEAD*/
-                pointBackgroundColor: 'blue', 
-                data: [{
-                    x: 37,
-                    y: 407
-                },{
-                    x: 65,
-                    y: 350                        
-                },{
-                    x:63,
-                    y:300
-                },{
-                    x: 62,
-                    y:270
-                }]
+        datasets: [
+                {
+                /*WELLHEAD 3-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255,0.2)', 
+                data: 
+                [
+                    {
+                        x: 37,
+                        y: 407
+                    },{
+                        x: 65,
+                        y: 350                        
+                    },{
+                        x:63,
+                        y:300
+                    },{
+                        x: 62,
+                        y:270
+                    }
+                ]
 
-             },{
+             },
+             {  /*WELLHEAD 2-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255, 0.5)', 
+                data: 
+                [
+                    {
+                        x: 32,
+                        y: 402
+                    },{
+                        x: 60,
+                        y: 345                        
+                    },{
+                        x:58,
+                        y:295
+                    },{
+                        x: 57,
+                        y:265
+                    }
+                ]                 
+             },
+             {  /*WELLHEAD 1-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255, 0.8)', 
+                data: 
+                [
+                    {
+                        x: 27,
+                        y: 397
+                    },{
+                        x: 55,
+                        y: 340                        
+                    },{
+                        x:53,
+                        y:290
+                    },{
+                        x: 52,
+                        y:260
+                    }
+                ]                  
+             },
+             {  /*WELLHEAD NOW*/
+                pointBackgroundColor: 'rgb(0,0,255,1.0)', 
+                data: 
+                [
+                    {
+                        x: 22,
+                        y: 392
+                    },{
+                        x: 50,
+                        y: 335                        
+                    },{
+                        x:48,
+                        y:285
+                    },{
+                        x: 47,
+                        y:255
+                    }
+                ]                   
+             },
+             {
         
             /*CURVA HYDRATE*/
             pointBackgroundColor: 'black', 
-            data: [{
-                x: 10,
-                y: 50
-            },{
-                x: 22,
-                y: 80                        
-            },{
-                x:35,
-                y:150
-            },{
-                x: 42,
-                y: 220
-            },{
-                x: 55,
-                y:410
-            }],
+            data:
+            [
+
+                {
+                    x: 10,
+                    y: 50
+                },{
+                    x: 22,
+                    y: 80                        
+                },{
+                    x:35,
+                    y:150
+                },{
+                    x: 42,
+                    y: 220
+                },{
+                    x: 50,
+                    y: 410
+                }
+
+            ],
             borderColor: 'black',
             borderWidth: 2,
             pointBackgroundColor: 'black',
@@ -1012,8 +1247,8 @@
 
             },
             {
-            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'brown', 
+            /*TOP-SIDE 1-MIN*/
+            pointBackgroundColor: 'rgb(255,0,238,0.2)', 
             data: [{
                 x: 95,
                 y: 72
@@ -1021,7 +1256,19 @@
                 x: 76,
                 y: 89                        
             }]
-        }],
+            },
+            {
+                /*TOP-SIDE NOW*/
+                pointBackgroundColor: 'rgb(255,0,238,1.0)', 
+                data: [{
+                    x: 90,
+                    y: 67
+                },{
+                    x: 71,
+                    y: 84                        
+                }]            
+            }
+        ],
            
         },
         options: {
@@ -1059,28 +1306,89 @@
         var scatterChart = new Chart(chart_wax, {
         type: 'scatter',
         data: {
-        datasets: [{
-        
-            /*WELLHEAD*/
-            pointBackgroundColor: 'blue', 
-            data: [{
-                x: 37,
-                y: 407
-            },{
-                x: 65,
-                y: 350                        
-            },{
-                x:63,
-                y:300
-            },{
-                x: 62,
-                y:270
-            }],
-            
-            },{
+        datasets: [
+                {   
+                /*WELLHEAD 3-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255,0.2)', 
+                data: 
+                [
+                    {
+                        x: 37,
+                        y: 407
+                    },{
+                        x: 65,
+                        y: 350                        
+                    },{
+                        x:63,
+                        y:300
+                    },{
+                        x: 62,
+                        y:270
+                    }
+                ]
+
+             },
+             {  /*WELLHEAD 2-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255, 0.5)', 
+                data: 
+                [
+                    {
+                        x: 32,
+                        y: 402
+                    },{
+                        x: 60,
+                        y: 345                        
+                    },{
+                        x:58,
+                        y:295
+                    },{
+                        x: 57,
+                        y:265
+                    }
+                ]                 
+             },
+             {  /*WELLHEAD 1-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255, 0.8)', 
+                data: 
+                [
+                    {
+                        x: 27,
+                        y: 397
+                    },{
+                        x: 55,
+                        y: 340                        
+                    },{
+                        x:53,
+                        y:290
+                    },{
+                        x: 52,
+                        y:260
+                    }
+                ]                  
+             },
+             {  /*WELLHEAD NOW*/
+                pointBackgroundColor: 'rgb(0,0,255,1.0)', 
+                data: 
+                [
+                    {
+                        x: 22,
+                        y: 392
+                    },{
+                        x: 50,
+                        y: 335                        
+                    },{
+                        x:48,
+                        y:285
+                    },{
+                        x: 47,
+                        y:255
+                    }
+                ]                   
+             },
+            {
         
             /*WAX*/
-            pointBackgroundColor: 'blue', 
+            pointBackgroundColor: 'rgb(0,0,255)', 
             data: [{
                 x: 110,
                 y: 50
@@ -1109,8 +1417,8 @@
 
         },
         {
-            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'brown', 
+            /*TOP-SIDE 1-MIN*/
+            pointBackgroundColor: 'rgb(255,0,238,0.2)', 
             data: [{
                 x: 95,
                 y: 72
@@ -1118,7 +1426,19 @@
                 x: 76,
                 y: 89                        
             }]
-        }],
+            },
+            {
+                /*TOP-SIDE NOW*/
+                pointBackgroundColor: 'rgb(255,0,238,1.0)', 
+                data: [{
+                    x: 90,
+                    y: 67
+                },{
+                    x: 71,
+                    y: 84                        
+                }]            
+            }
+        ],
            
         },
         options: {
@@ -1155,24 +1475,86 @@
         var scatterChart = new Chart(chart_asphaltene, {
         type: 'scatter',
         data: {
-        datasets: [{
-        
-            /*WELLHEAD*/
-            pointBackgroundColor: 'blue', 
-            data: [{
-                x: 37,
-                y: 407
-            },{
-                x: 65,
-                y: 350                        
-            },{
-                x:63,
-                y:300
-            },{
-                x: 62,
-                y:270
-            }]
-        },{
+        datasets: [
+        {   
+                /*WELLHEAD 3-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255,0.2)', 
+                data: 
+                [
+                    {
+                        x: 37,
+                        y: 407
+                    },{
+                        x: 65,
+                        y: 350                        
+                    },{
+                        x:63,
+                        y:300
+                    },{
+                        x: 62,
+                        y:270
+                    }
+                ]
+
+             },
+             {  /*WELLHEAD 2-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255, 0.5)', 
+                data: 
+                [
+                    {
+                        x: 32,
+                        y: 402
+                    },{
+                        x: 60,
+                        y: 345                        
+                    },{
+                        x:58,
+                        y:295
+                    },{
+                        x: 57,
+                        y:265
+                    }
+                ]                 
+             },
+             {  /*WELLHEAD 1-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255, 0.8)', 
+                data: 
+                [
+                    {
+                        x: 27,
+                        y: 397
+                    },{
+                        x: 55,
+                        y: 340                        
+                    },{
+                        x:53,
+                        y:290
+                    },{
+                        x: 52,
+                        y:260
+                    }
+                ]                  
+             },
+             {  /*WELLHEAD NOW*/
+                pointBackgroundColor: 'rgb(0,0,255,1.0)', 
+                data: 
+                [
+                    {
+                        x: 22,
+                        y: 392
+                    },{
+                        x: 50,
+                        y: 335                        
+                    },{
+                        x:48,
+                        y:285
+                    },{
+                        x: 47,
+                        y:255
+                    }
+                ]                   
+             },
+        {
         
         pointBackgroundColor: 'black', 
         data: [{
@@ -1233,16 +1615,28 @@
 
         },
         {
-            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'brown', 
+            /*TOP-SIDE 1-MIN*/
+            pointBackgroundColor: 'rgb(255,0,238,0.2)', 
             data: [{
                 x: 95,
                 y: 72
             },{
                 x: 76,
-                y: 89                        
+                y: 89                           
             }]
-        }],
+            },
+            {
+                /*TOP-SIDE NOW*/
+                pointBackgroundColor: 'rgb(255,0,238,1.0)', 
+                data: [{
+                    x: 90,
+                    y: 67
+                },{
+                    x: 71,
+                    y: 84                        
+                }]            
+            }
+        ],
            
         },
         options: {
@@ -1278,35 +1672,108 @@
         var scatterChart = new Chart(chart_chemichals, {
         type: 'scatter',
         data: {
-        datasets: [{
-        
-            /*WELLHEAD*/
-            pointBackgroundColor: 'blue', 
-            data: [{
-                x: 37,
-                y: 407
-            },{
-                x: 65,
-                y: 350                        
-            },{
-                x:63,
-                y:300
-            },{
-                x: 62,
-                y:270
-            }]
-        },
+        datasets: [
+        {   
+                /*WELLHEAD 3-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255,0.2)', 
+                data: 
+                [
+                    {
+                        x: 37,
+                        y: 407
+                    },{
+                        x: 65,
+                        y: 350                        
+                    },{
+                        x:63,
+                        y:300
+                    },{
+                        x: 62,
+                        y:270
+                    }
+                ]
+
+             },
+             {  /*WELLHEAD 2-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255, 0.5)', 
+                data: 
+                [
+                    {
+                        x: 32,
+                        y: 402
+                    },{
+                        x: 60,
+                        y: 345                        
+                    },{
+                        x:58,
+                        y:295
+                    },{
+                        x: 57,
+                        y:265
+                    }
+                ]                 
+             },
+             {  /*WELLHEAD 1-MIN*/
+                pointBackgroundColor: 'rgb(0,0,255, 0.8)', 
+                data: 
+                [
+                    {
+                        x: 27,
+                        y: 397
+                    },{
+                        x: 55,
+                        y: 340                        
+                    },{
+                        x:53,
+                        y:290
+                    },{
+                        x: 52,
+                        y:260
+                    }
+                ]                  
+             },
+             {  /*WELLHEAD NOW*/
+                pointBackgroundColor: 'rgb(0,0,255,1.0)', 
+                data: 
+                [
+                    {
+                        x: 22,
+                        y: 392
+                    },{
+                        x: 50,
+                        y: 335                        
+                    },{
+                        x:48,
+                        y:285
+                    },{
+                        x: 47,
+                        y:255
+                    }
+                ]                   
+             },
         {
-            /*TOP-SIDE  TEMPERATURA E PRESSAO DOS 4 POCOS NA REGIAO DO TOP-SIDE*/
-            pointBackgroundColor: 'brown', 
+            /*TOP-SIDE 1-MIN*/
+            pointBackgroundColor: 'rgb(255,0,238,0.2)', 
             data: [{
                 x: 95,
                 y: 72
             },{
                 x: 76,
-                y: 89                        
+                y: 89                           
             }]
-        }],
+            },
+            {
+                /*TOP-SIDE NOW*/
+                pointBackgroundColor: 'rgb(255,0,238,1.0)', 
+                data: [{
+                    x: 90,
+                    y: 67
+                },{
+                    x: 71,
+                    y: 84                        
+                }]            
+            }
+        ],
            
         },
         options: {
